@@ -1,0 +1,9 @@
+# Ignore output folders
+**/output/
+
+# Ignore executable files (C, C++, Rust, etc.)
+**/*.exe
+
+# Ignore VS Code folders
+.vs/
+.vscode/
