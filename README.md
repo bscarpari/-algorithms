@@ -2,7 +2,7 @@
 
 This repository contains my exercises and theoretical content about algorithms and data structures, organized by programming language.
 
-![Algorithm GIF](https://media4.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif?cid=ecf05e47o3js1t2ts2lfcft635loag7h1yrdaovhg5k3ok7l&ep=v1_gifs_related&rid=giphy.gif&ct=g)
+![Algorithm GIF](./giphy.gif)
 
 ## Structure
 
