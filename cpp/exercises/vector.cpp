@@ -7,7 +7,7 @@ using namespace std;
   More dinamic and easy code example with C++
 */
 
-int main() {
+int swap_array_elements() {
   int n;
   cout << "Enter the number of elements: ";
   cin >> n;
