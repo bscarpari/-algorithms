@@ -1,6 +1,6 @@
 #include <stdio.h>
-# define init 121
-# define final 201
+#define init 121
+#define final 201
 
 /*
   Faça  um  programa  que  mostra  os  números
