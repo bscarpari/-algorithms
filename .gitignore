@@ -1,6 +1,8 @@
 # Ignore output folders
 **/output/
 
+**/tempCodeRunnerFile
+
 # Ignore executable files (C, C++, Rust, etc.)
 **/*.exe
 

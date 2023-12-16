@@ -1,66 +1,67 @@
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main() {
-	setlocale(LC_ALL, "");
-	int i = 1;
-	int idade = 0, peso = 0, jejum = 0, sintomas = 0, doadores = 0, naoDoadores = 0;
-	
-	// a) Programa que pergunta para um número não determinado de doares (1,0)
-	do {
-		// c) Consistência na entrada de cada dado lido
-		printf("\n====Doador %i====", i);
-		
-		printf("\nInforme sua idade: ");
-		scanf("%i", &idade);
-		
-		if(idade < 0) {
-			printf("\nIdade inválida");
-			return 0;
-		}
-		
-		printf("Qual é o seu peso? ");
-		scanf("%i", &peso);
-		
-		if(peso < 0)  {
-			printf("\nPeso inválido");
-			return 0;
-		}
-		
-		printf("Você está em jejum? [Digite 0 (FALSE) e 1 (TRUE)]: ");
-		scanf("%i", &jejum);
-		
-		if(jejum < 0 && jejum > 1)  {
-			printf("\nJejum inválido");
-			return 0;
-		}
-		
-		printf("Você está com sintomas gripais? [Digite 0 (FALSE) e 1 (TRUE)]: ");
-		scanf("%i", &sintomas);
-		
-		if(sintomas < 0 && sintomas > 1) {
-			printf("\nSintomas inválido");
-			return 0;
-		}
-		
-		if(idade > 18 && idade < 67 && peso > 50 && jejum == 0 && sintomas == 0) {
-			printf("Doador %i, você PODE pode doar sangue", i);
-			doadores++;
-		} else {
-			printf("Doador %i, você NÃO doar sangue", i);
-			naoDoadores++;
-		}
-		
-		printf("\n\n");
-		
-		i++;
-	} while (idade != 0);
-	
-	// b) Indique quantos usuários são doadores e quantos nao são (1,0)
-	printf("\nHá %i doadores de sangue\nHá %i não doadores de sangue\n", doadores, naoDoadores);
+  setlocale(LC_ALL, "");
+  int i = 1;
+  int idade = 0, peso = 0, jejum = 0, sintomas = 0, doadores = 0,
+      naoDoadores = 0;
 
-	system("pause");
-	return 0;
+  // a) Programa que pergunta para um nï¿½mero nï¿½o determinado de doares (1,0)
+  do {
+    // c) Consistï¿½ncia na entrada de cada dado lido
+    printf("\n====Doador %i====", i);
+
+    printf("\nInforme sua idade: ");
+    scanf("%i", &idade);
+
+    if (idade < 0) {
+      printf("\nIdade invï¿½lida");
+      return 0;
+    }
+
+    printf("Qual ï¿½ o seu peso? ");
+    scanf("%i", &peso);
+
+    if (peso < 0) {
+      printf("\nPeso invï¿½lido");
+      return 0;
+    }
+
+    printf("Vocï¿½ estï¿½ em jejum? [Digite 0 (FALSE) e 1 (TRUE)]: ");
+    scanf("%i", &jejum);
+
+    if (jejum < 0 && jejum > 1) {
+      printf("\nJejum invï¿½lido");
+      return 0;
+    }
+
+    printf("Vocï¿½ estï¿½ com sintomas gripais? [Digite 0 (FALSE) e 1 (TRUE)]: ");
+    scanf("%i", &sintomas);
+
+    if (sintomas < 0 && sintomas > 1) {
+      printf("\nSintomas invï¿½lido");
+      return 0;
+    }
+
+    if (idade > 18 && idade < 67 && peso > 50 && jejum == 0 && sintomas == 0) {
+      printf("Doador %i, vocï¿½ PODE pode doar sangue", i);
+      doadores++;
+    } else {
+      printf("Doador %i, vocï¿½ Nï¿½O doar sangue", i);
+      naoDoadores++;
+    }
+
+    printf("\n\n");
+
+    i++;
+  } while (idade != 0);
+
+  // b) Indique quantos usuï¿½rios sï¿½o doadores e quantos nao sï¿½o (1,0)
+  printf("\nHï¿½ %i doadores de sangue\nHï¿½ %i nï¿½o doadores de sangue\n", doadores,
+         naoDoadores);
+
+  system("pause");
+  return 0;
 }
-

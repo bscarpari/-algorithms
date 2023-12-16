@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// 2) (2,0) Algum tempo atr�s, foi realizada uma pesquisa em Porto Alegre,
+// com um n�mero desconhecido de pessoas. De cada entrevistado(a)
+// foram colhidos os seguintes dados:
+// a) clube de prefer�ncia (1-Gr�mio; 2-Internacional; 3-Outros);
+// b) cidade de origem (0-Porto Alegre; 1-Outras).
+// Deseja-se saber:
+// a) n�mero de torcedores por clube;
+// b) n�mero de pessoas nascidas em Porto Alegre que n�o torcem
+// por nenhum dos dois primeiros clubes;
+// c) n�mero de pessoas entrevistadas.
+// Para encerrar a entrada de dados, o time fornecido dever� ser igual a
+// zero (n�o esque�a de fazer a consist�ncia dos dados de entrada).
+
+int main() {
+  int clube, gremio = 0, internacional = 0, outros_clubes = 0;
+  int cidade, poa = 0, outras_cidades = 0, alternativaB = 0;
+  int contEntrevistados = 0;
+
+  do {
+    printf("Para qual clube voc� torce?\n");
+    printf("1 - GR�MIO\n2 - INTERNACIONAL\n3 - OUTROS\n");
+    printf("Digite clube '0' para encerrar o programa!\n");
+
+    scanf("%d", &clube);
+
+    // Contagem das informações
+    if (clube == 1) {
+      gremio++;
+    } else if (clube == 2) {
+      internacional++;
+    } else if (clube == 3) {
+      outros_clubes++;
+    } else {
+      printf("Clube inv�lido!");
+      break;
+    }
+
+    printf("Qual é a sua cidade de origem?\n");
+    printf("0 - PORTO ALEGRE\n1 - OUTRAS\n");
+    scanf("%d", &cidade);
+
+    if (cidade == 0) {
+      poa++;
+    } else if (cidade == 1) {
+      outras_cidades++;
+    } else {
+      printf("Cidade invalida!");
+      break;
+    }
+
+    // c) numero de pessoas entrevistadas.
+    contEntrevistados++;
+
+    // b) numero de pessoas nascidas em Porto Alegre que nao torcem por nenhum
+    // dos dois primeiros clubes;
+    if (cidade == 0 && clube != 1 && clube != 2) {
+      alternativaB++;
+    }
+
+  } while (clube != 0);
+
+  printf("numero de torcedores por clube:\n");
+  printf("GREMIO = %d\n", gremio);
+  printf("INTERNACIONAL = %d\n", internacional);
+  printf("Outros clubes = %d\n", outros_clubes);
+  printf("-----------------------------------\n");
+  printf(
+      "Numero de pessoas nascidas em Porto Alegre que n�o torcem por nenhum "
+      "dos dois primeiros clubes = %d\n",
+      alternativaB);
+  printf("-----------------------------------\n");
+  printf("Numero de pessoas entrevistadas = %d\n", contEntrevistados);
+
+  printf("\n\n");
+
+  return 0;
+}
