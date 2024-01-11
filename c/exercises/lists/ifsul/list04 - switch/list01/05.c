@@ -13,9 +13,9 @@
 
   Cargo             |  Percentual
   1 - Gerente       |  10%
-  2 - Engenheiro    | 20%
-  3 - Tecnico       | 30%
-  4 - Outros        | 40%
+  2 - Engenheiro    |  20%
+  3 - Tecnico       |  30%
+  4 - Outros        |  40%
 
 */
 
