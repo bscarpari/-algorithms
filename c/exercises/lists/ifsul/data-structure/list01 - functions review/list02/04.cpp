@@ -9,10 +9,21 @@
 
 int fatorial(int n) {
 	if(n == 0) return 1;
-	return fatorial(n - 1);
+	return n * fatorial(n - 1);
 }
 
 int main() {
+  int input = 0;
   
+  while(input != -1) {
+  	printf("\nDigite um fatorial a ser calculado: ");
+  	scanf("%i", &input);
+  	
+  	int result = fatorial(input);
+  	
+	printf("Output: %i", result);
+	printf("\n\n");
+  }
 }
+
 
