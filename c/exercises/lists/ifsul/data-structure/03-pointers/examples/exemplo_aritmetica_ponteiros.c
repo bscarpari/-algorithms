@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <locale.h>
 
 void main(){
+	setlocale(LC_ALL, "Portuguese");
 
 	//Declaração de um vetor inteio
 	int x[5]= {10, 20, 30, 40, 50};
@@ -32,7 +34,7 @@ void main(){
 	printf("\n\nA diferença entre p1 e p4 é de %ld ",p4-p1);
 
 	//Comparando os ponteiros p1 e p4 em sua igualdade	
-	if(p1 == p4){
+	if(p1 == p4) {
 		printf("\n\nOs valores são iguais ");
 	}
 	else{
