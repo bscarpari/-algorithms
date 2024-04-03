@@ -5,8 +5,11 @@ int main() {
     int *p_first_element = &vet[0];
     int length = sizeof(vet) / sizeof(int);
 
-    for(int i = 0; i < length; i++)
-        // printf("%i\n", *p_first_element[i]);
+    int i;
+
+    for(i = 0; i < length; i++) 
+    // TODO: revisar se estou printando os valores por meio do ponteiro
+        printf("%d\n", p_first_element[i]);
 
     return 0;
 }

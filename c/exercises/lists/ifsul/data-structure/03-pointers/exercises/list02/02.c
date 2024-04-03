@@ -11,7 +11,7 @@ int main() {
     float *p_float = &v_float;
     char *p_char = &v_char;
 
-    printf("\nAntes:\n%i %.2f %c\n", v_int, v_float, v_char);
+    printf("\nBefore:\n%i %.2f %c\n", v_int, v_float, v_char);
 
     /* Modifique os valores de cada variável usando os ponteiros */    
     *p_int = 2;
@@ -19,7 +19,7 @@ int main() {
     *p_char = 'b';
 
     /* Imprima os valores das variáveis antes e após a modificação */
-    printf("\nDepois:\n%i %.2f %c", *p_int, *p_float, *p_char);
+    printf("\nAfter:\n%i %.2f %c", *p_int, *p_float, *p_char);
 
     return 0;
 }

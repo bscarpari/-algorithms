@@ -4,12 +4,13 @@ int main() {
     int var = 1;
     int *ptr = &var;
 
-    printf("\nVariavel");
-    printf("\nValor da variavel (variavel): %i", var);
-    printf("\nEndereco na memoria (variavel): %i", &var);
-    printf("\n\nPonteiro");
-    printf("\nValor da variavel (ponteiro): %i", *ptr);
-    printf("\nEndereco da memoria (ponteiro): %i", &ptr);
+    // Variável
+    printf("\nValue: %i", var);
+    printf("\nMemory address: %i", &var);
+    
+    // Ponteiro
+    printf("\nValue from memory (pointer): %i", *ptr);
+    printf("\nMemory address (pointer): %i", &ptr);
 
     return 0;
 }
