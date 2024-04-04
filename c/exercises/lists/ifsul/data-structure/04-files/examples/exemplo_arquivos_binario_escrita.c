@@ -37,7 +37,7 @@ int main(){
 		//Leitura do teclado
 		printf("Digite uma linha de até 100 caracteres para ser armazenada em um arquivo, caso queira terminar digite ...\n");
 		scanf(" %[^\n]", string);
-
+		
 	}
 
 	//Fechamento do arquivo
