@@ -8,6 +8,10 @@ This repository contains my exercises and theoretical content about algorithms a
 
 Each programming language has its own folder with exercises and theoretical content.
 
+### Data Structure
+
+- [click here](./c/exercises/lists/ifsul/data-structure): my data structure ifsul discipline
+
 ### C
 
 - [exercises](./c/exercises) : practice exercises in C.
