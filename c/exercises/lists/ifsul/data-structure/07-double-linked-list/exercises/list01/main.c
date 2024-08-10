@@ -13,7 +13,7 @@ escolha de qual funcao o usuario quer executar na lista.
 
 /* Estrutura */
 struct node {
-  int info;
+  int value;
   struct node *prox;
 };
 
@@ -29,9 +29,6 @@ struct list {
  * @param list ponteiro para a lista a ser inicializada
  */
 void init(struct list *list) {
-//  struct list *temp = (struct list *)malloc(sizeof(struct list));
-//  temp->first = NULL;
-//  return temp;
 	list->first = NULL;
 }
 
@@ -40,26 +37,26 @@ void init(struct list *list) {
  *
  * @param previous nÃ³ anterior ao novo nÃ³ a ser inserido
  * @param desc ponteiro para a lista
- * @param info informaÃ§Ã£o a ser inserida
+ * @param value informaÃ§Ã£o a ser inserida
  * @return void
  * @see https://www.ime.usp.br/~pf/algoritmos/aulas/lista.html
  */
-void insert(struct node *previous, struct list *desc, int info) {
+void insert(struct node *previous, struct list *desc, int value) {
   if (previous == NULL) {
     if (desc->first == NULL) {
       struct node *new_node = (struct node *)malloc(sizeof(struct node));
-      new_node->info = info;
+      new_node->value = value;
       new_node->prox = NULL;
       desc->first = new_node;
     } else {
       struct node *new_node = (struct node *)malloc(sizeof(struct node));
-      new_node->info = info;
+      new_node->value = value;
       new_node->prox = desc->first;
       desc->first = new_node;
     }
   } else {
     struct node *new_node = (struct node *)malloc(sizeof(struct node));
-    new_node->info = info;
+    new_node->value = value;
     new_node->prox = previous->prox;
     previous->prox = new_node;
   }
@@ -69,7 +66,7 @@ void print_list(struct list * desc) {
 	struct node *current = desc->first;
 	
 	while(current != NULL) {
-		printf("%d -> ", current->info);
+		printf("%d -> ", current->value);
 		current = current->prox;
 	}
 	
@@ -100,7 +97,7 @@ void removeNode(struct node *previous, struct list *desc) {
   }
 }
 
-struct node *findByNode(struct list *desc, int info) {
+struct node *findByNode(struct list *desc, int value) {
   struct node *temp = desc->first;
 
   if (temp == NULL) {
@@ -109,7 +106,7 @@ struct node *findByNode(struct list *desc, int info) {
   }
   else {
     while (temp != NULL) {
-      if (temp->info == info)
+      if (temp->value == value)
         return temp;
 
       temp = temp->prox;
@@ -132,7 +129,7 @@ int main() {
         printf("2. Remover elemento\n");
         printf("3. Mostrar lista\n");
         printf("4. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opï¿½ï¿½o: ");
         scanf("%d", &choice);
 
         switch (choice) {
@@ -150,7 +147,7 @@ int main() {
             case 4:
                 exit(0);
             default:
-                printf("Opção inválida!\n");
+                printf("Opï¿½ï¿½o invï¿½lida!\n");
         }
     }
 }
